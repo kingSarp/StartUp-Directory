@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+/* Root Light Mode Variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Tailwind-based custom tokens */
+  --color-primary-100: #FFE8F0;
+  --color-primary: #EE2B69;
+  --color-secondary: #FBE843;
+
+  --color-black-100: #333333;
+  --color-black-200: #141413;
+  --color-black-300: #7D8087;
+  --color-black: #000000;
+
+  --color-white-100: #F7F7F7;
+  --color-white: #FFFFFF;
+
+  --font-work-sans: 'Work Sans', sans-serif;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius: 0.5rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-100: 2px 2px 0px 0px rgb(0, 0, 0);
+  --shadow-200: 2px 2px 0px 2px rgb(0, 0, 0);
+  --shadow-300: 2px 2px 0px 2px rgb(238, 43, 105);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+  }
+}
+
+/* Global Styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utility Classes */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-primary-100 {
+  background-color: var(--color-primary-100);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-black-100 {
+  color: var(--color-black-100);
+}
+.text-white {
+  color: var(--color-white);
+}
+.font-work-sans {
+  font-family: var(--font-work-sans);
+}
+.shadow-100 {
+  box-shadow: var(--shadow-100);
+}
+.shadow-200 {
+  box-shadow: var(--shadow-200);
+}
+.shadow-300 {
+  box-shadow: var(--shadow-300);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+/* Responsive (xs breakpoint) */
+@media (min-width: 475px) {
+  .xs\:text-lg {
+    font-size: 1.125rem;
+  }
+}
